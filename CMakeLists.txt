@@ -12,8 +12,9 @@ include(pico_sdk_import.cmake)
 # Pull in FreeRTOS
 include(FreeRTOS_Kernel_import.cmake)
 
+set(PICO_BOARD seeed_xiao_rp2040)
 
-project(pst_rtos C CXX ASM)
+project(pst_rtos_xiao C CXX ASM)
 
 # Initialise the Raspberry Pi Pico SDK
 pico_sdk_init()

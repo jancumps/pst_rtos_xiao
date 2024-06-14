@@ -5,7 +5,7 @@
 
 
 // manufacturer
-#define SCPI_IDN1 "PICO-PI"
+#define SCPI_IDN1 "PICO-XIAO"
 // model
 #define SCPI_IDN2 "LABTOOL"
 // serial number
