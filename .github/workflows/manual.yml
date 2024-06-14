@@ -12,12 +12,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
+    steps:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: actions-template-sync
+        uses: actions/checkout@v4
+        with:
+          # submodules: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Template sync
         uses: AndreasAugustin/actions-template-sync@v2
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          source_repo_path: ${{ secrets.SOURCE_REPO_PATH }}
-          upstream_branch: main # defaults to main
+          source_repo_path: ${{ secrets.SOURCE_REPO_PATH }} # <owner/repo>, should be within secrets
+
